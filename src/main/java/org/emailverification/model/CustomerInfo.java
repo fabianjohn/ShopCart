@@ -1,0 +1,48 @@
+package org.emailverification.model;
+
+import org.emailverification.form.CustomerForm;
+
+public class CustomerInfo {
+	private String name;
+	private String address;
+	private String email;
+	private String phone;
+	public CustomerInfo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public CustomerInfo(CustomerForm customerForm) {
+		super();
+		this.name = customerForm.getName();
+		this.address = customerForm.getAddress();
+		this.email = customerForm.getEmail();
+		this.phone = customerForm.getPhone();
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	
+
+}

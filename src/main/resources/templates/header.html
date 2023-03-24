@@ -1,0 +1,76 @@
+<div class="header-container"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+ 
+     
+<div class="header" id="myHeader">
+
+   
+   <div class="flex-container">
+   <div class="flex-header">
+   <a href="/" style="float: left; background-color: #152238; padding: 20px;"><b>ShopMe</b></a> 
+   
+    
+   <!--  
+   <div class="flex-header">
+   <!--  -
+   <b>
+   <a href="#">Home</a>
+   <a href="#">Gown</a>
+   <a href="#">Skirt</a>
+   <a href="#">Shoe</a>
+   <a href="#">About</a>
+   <a href="#">Contact</a>
+   </b>
+  -->
+   <!-- code to display category added -->
+   <div class="flex-cont">
+   
+   <div class="rowhead" th:each="listcategory: ${listcategory }" >
+		<a th:href="@{|/apply?productName=${listcategory.productName}&catName=${listcategory.catName}|}"><b><span th:utext="${listcategory.catName}"></span></b></a> 	
+		<!--   <h5><a th:href="@{|/apply?id=${listjob.jobId}&jobTitle=${listjob.jobTitle}&jobLocation=${listjob.jobLocation}|}"></a></h3> --> 
+	</div>	
+  </div>
+   
+   <div class="iconhead" style="float: right;">
+   
+   <span class="glyphicon glyphicon-send" id="flip" style="color:white; margin-right: 20px"></span>
+   
+   <span class="glyphicon glyphicon-shopping-cart" id="flip1" style="color: white; margin-right: 20px"></span>
+   
+   <a href="#">
+          <span  class="glyphicon glyphicon-earphone" id="flip3" style="color:white"></span>
+        </a>
+   </div>    
+      
+		
+   </div>
+   </div>
+  
+ 
+    <div id="panel" style="width:100%; background-color: black; height: 400px">
+			<h4>Lagos Nigeria </h4>
+     		<p> <span class="glyphicon glyphicon-earphone" style="color:blue"></span>+234 8148360715</p>
+      		<a>fabianjohn234@gmail.com</a>
+			<button id="close" style=" position:relative; left: 170px; bottom: 50px"><b>Close</b></button>
+    </div>
+		
+		
+	<div id="panel1" >
+		<h4></h4>
+     
+      <h3>No item in cart</h3>
+		<button id="closecart" style=" position:relative;  bottom: 80px"><b>Close</b></button>
+	</div>
+	
+	<div id="panel3" >
+		<h4></h4>
+     
+      <h3>+234 081-4836-0715</h3>
+		<button id="closecont" style=" position:relative;  bottom: 80px"><b>Close</b></button>
+	</div>
+	
+	
+  
+</div>
+</div>

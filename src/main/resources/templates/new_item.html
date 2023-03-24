@@ -1,0 +1,26 @@
+<div class="new_item-container"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+      
+      
+      
+      <div class="flex-container" >
+      
+      <div class="flex-item">
+      <div class="#" th:each="listproduct: ${listproduct }" style="font-size: 20;">
+     
+      
+       <img src="${obj}" style="height: 40px"/>
+        <img src="/image/savedProduct?id=${product.code}"/> 
+            
+      
+      
+      </div>
+      </div>
+      
+      
+      
+      </div>
+      
+      
+  </div>
