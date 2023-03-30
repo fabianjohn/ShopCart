@@ -77,7 +77,7 @@ public class MainController {
 	public String saveProduct(@ModelAttribute("product") Product newproduct, Model model) {
 		      Product product = new Product();
 			  Random random = new Random();
-			  int randomCode = random.nextInt(100000); 
+			  String randomCode = random.toString(); // (100000); 
 			  product.setCode(randomCode);
                 model.addAttribute("message", "Product added Successful");
                 System.out.print(randomCode);
